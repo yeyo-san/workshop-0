@@ -1,10 +1,15 @@
 {
-  "task": [
+  "task": [],
+  "notes": [
     {
-      "name": "pegarmelosplones",
-      "description": "alas5",
-      "status": "iniciando",
-      "id": "d24a"
+      "id": "86df",
+      "note": "hacer el workshop ",
+      "status": "importante"
+    },
+    {
+      "note": "fumar",
+      "status": "Importante",
+      "id": "a9f9"
     }
   ]
 }
