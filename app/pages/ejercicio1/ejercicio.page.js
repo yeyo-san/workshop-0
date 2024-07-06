@@ -6,7 +6,7 @@ export function ejercicio1Page(){
 
         </div>
 
-        <button id="crear">Crear nueva tarea</button>
+        <button id="crear" class="bg-slate-400 rounded-lg p-2">Crear nueva tarea</button>
 
 
         <div id='container'>
@@ -30,10 +30,10 @@ export function ejercicio1Page(){
             modal.innerHTML = /*html*/ ` 
                 <form>
                     <label for="nombre">nombre de la tarea</label>
-                    <input type="text" id="nombre">
+                    <input type="text" id="nombre" class="bg-orange-300 rounded-lg pl-2 pr-2">
 
                     <label for="description">description</label>
-                    <input type="text" id="description">
+                    <input type="text" id="description" class="bg-orange-300 rounded-lg pl-2 pr-2">
 
                     <select id="status">
                         <option value="0" disabled>Selecciona un estado</option>
@@ -41,8 +41,8 @@ export function ejercicio1Page(){
                         <option value="progreso">En progreso</option>
                     </select>
 
-                    <input type="submit" value="enviar">
-                    <button id="close">close</button>
+                    <input type="submit" value="enviar" class="bg-orange-500  rounded-lg p-2">
+                    <button id="close" class="bg-slate-400 rounded-lg p-2">close</button>
                 </form>
             ` 
 
@@ -102,13 +102,13 @@ export function ejercicio1Page(){
 
             taskToJson.forEach(task => {
                 container.innerHTML += /*html*/ `
-                    <div>
+                    <div class="bg-black text-white p-2 ">
                         <h1>${task.name}</h1>
                         <p>${task.description}</p>
                         <p>${task.status}</p>
 
-                        <button class="edit">Editar</button>
-                        <button class="delete">Eliminar</button>
+                        <button class="edit" class="bg-orange-500  rounded-lg p-2">Editar</button>
+                        <button class="delete" class="bg-slate-400 rounded-lg p-2">Eliminar</button>
                     </div>
                 `
                 
@@ -153,10 +153,10 @@ export function ejercicio1Page(){
                         modal.innerHTML = /*html*/ ` 
                             <form>
                                 <label for="nombre" >Nombre</label>
-                                <input type="text" id="nombre" disabled value=${task.name}>
+                                <input type="text" id="nombre" disabled value=${task.name} class="bg-orange-300 rounded-lg pl-2 pr-2">
             
                                 <label for="description">Description</label>
-                                <input type="text" id="description" disabled value=${task.description}>
+                                <input type="text" id="description" class="bg-orange-300 rounded-lg pl-2 pr-2" disabled value=${task.description}>
             
                                 <select id="status">
                                     <option value="0" disabled>Selecciona un estado</option>
@@ -165,8 +165,8 @@ export function ejercicio1Page(){
                                     <option value="finalizada">Finalizada</option>
                                 </select>
             
-                                <input type="submit" value="enviar">
-                                <button id="close">close</button>
+                                <input type="submit" value="enviar" class="bg-orange-500  rounded-lg p-2">
+                                <button id="close" class="bg-slate-400 rounded-lg p-2">close</button>
                             </form>
                         ` 
             

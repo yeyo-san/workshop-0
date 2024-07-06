@@ -1,14 +1,17 @@
 export function ejercicio5Page(){
     const $content = /*html*/ `
-        <h1>Tienda de barrio, devuelta a los uorsho</h1>
-        <p>¿Que deseas hacer?</p>
-        <button id="show">Ver productos</button>
-        <button id="calculate">Calcular el precio total</button>
-        <button id="searchByName">Buscar productos por nombre</button>
-        <button id="searchByCategory">Buscar producto por categoria</button> 
-        <button id="avaliable">Verificar disponibilidad de productos</button>
-        <button id="getNamesProduct">Obtener Nombres de Productos</button>
-
+        <h1 class="font-bold text-center">Tienda de barrio, devuelta a los uorsho</h1>
+        <p class="text-center">¿Que deseas hacer?</p>
+        <div class="p-2 flex justify-evenly">
+            
+            <button id="show">Ver productos</button>
+            <button id="calculate">Calcular el precio total</button>
+            <button id="searchByName">Buscar productos por nombre</button>
+            <button id="searchByCategory">Buscar producto por categoria</button> 
+            <button id="avaliable">Verificar disponibilidad de productos</button>
+            <button id="getNamesProduct">Obtener Nombres de Productos</button>
+        </div>
+        
         <div id="container">
 
         </div>

@@ -1,16 +1,16 @@
 export function ejercicio4Page(){
     const $content = /*html*/ `
-        <form>
-            <label>Buscar prenda por nombre:</label>
-            <input type="search" id="search">
-            <input type="submit" id="submit">
+        <form class="flex justify-center p-12 gap-4 text-lg">
+            <label class="font-bold">Buscar prenda por nombre:</label>
+            <input type="search" id="search" class="bg-orange-300 rounded-lg pl-2 pr-2">
+            <input type="submit" id="submit" value="Buscar" class="bg-black text-white rounded-lg w-20 p-1">
         </form>
         
-        <div id="container">
+        <div id="container" class="grid grid-cols-4 gap-4">
             
         </div>
 
-        <div id="containerSearch">
+        <div id="containerSearch" class="grid grid-cols-4 gap-4">
 
         </div>
     `
@@ -36,11 +36,11 @@ export function ejercicio4Page(){
 
             apiToJson.forEach((e) => {
                 $container.innerHTML += /*html*/ `
-                    <div key=${e.id} class="tarjet">
-                        <h1>${e.title}</h1>
-                        <p>${e.price}</p>
-                        <p>${e.description}</p>
-                        <img src=${e.images} alt="">
+                    <div key=${e.id} class="mx-4 p-4 text-white bg-black rounded-lg hover:bg-slate-900">
+                        <h1 class="font-bold text-center mb-3">${e.title}</h1>
+                        <img class="rounded-xl" src=${e.images} alt="">
+                        <p class="bg-slate-800 rounded-lg text-white mt-3 p-4">${e.description}</p>
+                        <p class="text-xl text-amber-600 m-3 w-20">${e.price} $USD</p>
                     </div>
             `
             });
@@ -55,13 +55,13 @@ export function ejercicio4Page(){
                 const foundProducts = await apiToJson.filter(e => e.title === $search.value );
                 console.log(foundProducts);
 
-                foundProducts.forEach((products) =>{
+                foundProducts.forEach((e) =>{
                     containerSearch.innerHTML += /*html*/ `
-                    <div key=${products.id} class="tarjet">
-                        <h1>${products.title}</h1>
-                        <p>${products.price}</p>
-                        <p>${products.description}</p>
-                        <img src=${products.images} alt="">
+                     <div key=${e.id} class="mx-4 p-4 text-white bg-black rounded-lg hover:bg-slate-900">
+                        <h1 class="font-bold text-center mb-3">${e.title}</h1>
+                        <img class="rounded-xl" src=${e.images} alt="">
+                        <p class="bg-slate-800 rounded-lg text-white mt-3 p-4">${e.description}</p>
+                        <p class="text-xl text-amber-600 m-3 w-20">${e.price} $USD</p>
                     </div>
                 `
                 })

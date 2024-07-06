@@ -111,11 +111,11 @@ export function ejercicio2Page(){
                 
                 for(let f of deleteNote){
                     f.addEventListener('click', async () =>{
-                        const inputUSer = confirm('¿Seguro quieres eliminar esta tarea?');
+                        const inputUSer = confirm('¿Seguro quieres eliminar esta Nota?');
 
                         if(inputUSer){
                             try{
-                                const _deleteTask = await fetch(` http://localhost:4000/task/${note.id}`, {
+                                const _deleteTask = await fetch(` http://localhost:4000/notes/${note.id}`, {
                                     method: 'DELETE',
                                     headers:{
                                         'Content-Type': 'application/json'
@@ -123,10 +123,10 @@ export function ejercicio2Page(){
                                 })
 
                                 if(!_deleteTask.ok){
-                                    throw new Error('No ha sido posible eliminar la tarea')
+                                    throw new Error('No ha sido posible eliminar la Nota')
                                 }
 
-                                alert('Tarea eliminada exitosamente')
+                                alert('Nota eliminada exitosamente')
                                 window.location.reload()
 
                             }catch(err){

@@ -1,15 +1,17 @@
 {
-  "task": [],
+  "task": [
+    {
+      "id": "7272",
+      "name": "ir al baño",
+      "description": "yaaa",
+      "status": "progreso"
+    }
+  ],
   "notes": [
     {
       "id": "86df",
       "note": "hacer el workshop ",
       "status": "importante"
-    },
-    {
-      "note": "fumar",
-      "status": "Importante",
-      "id": "a9f9"
     }
   ]
 }
